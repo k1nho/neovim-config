@@ -18,7 +18,7 @@ bufferline.setup({
       fg = '#073642',
     },
     background = {
-      fg = '#657b83',
+      fg = '#7aa2f7',
       bg = '#002b36'
     },
     buffer_selected = {
