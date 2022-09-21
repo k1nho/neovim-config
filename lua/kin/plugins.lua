@@ -8,11 +8,8 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    require = { 'tjdevries/colorbuddy.nvim' }
-  }
+  use 'wbthomason/packer.nvim' -- PACKER
+  use 'folke/tokyonight.nvim' -- Theme tokyonight
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'hoob3rt/lualine.nvim' -- Status line
   use 'jose-elias-alvarez/null-ls.nvim' -- Using Neovim as LS to inject LSP diagnostics, code actions ...
@@ -43,6 +40,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser in nvim
   use 'nvim-lua/plenary.nvim' -- Common Utils
   use 'akinsho/nvim-bufferline.lua' -- Customized bufferline (te)
+  use 'norcalli/nvim-colorizer.lua' -- Colorizer for highlighting code
 
   -- GIT
   use 'dinhhuy258/git.nvim' -- Git blame and browse
