@@ -42,7 +42,8 @@ packer.startup(function(use)
   use 'akinsho/nvim-bufferline.lua' -- Customized bufferline (te)
   use 'norcalli/nvim-colorizer.lua' -- Colorizer for highlighting code
 
-  -- GIT
+  -- TERMINAL AND GIT
   use 'dinhhuy258/git.nvim' -- Git blame and browse
-  use 'lewis6991/gitsigns.nvim'
+  use 'lewis6991/gitsigns.nvim' -- Show git status of a file in the gutter
+  use 'akinsho/toggleterm.nvim' -- show terminal on toggle
 end)
