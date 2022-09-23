@@ -30,3 +30,9 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
+
+-- Move text with alt in visual modeline
+-- keymap.set('v', "<A-k>", ":m .-2<CR>==")
+-- keymap.set('v', "<A-j>", ":m .+1<CR>==")
+
+keymap.set('n', ';b', ':NvimTreeToggle<cr>', {silent = true}) -- open sidebar tree explorer
