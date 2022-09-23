@@ -36,6 +36,7 @@ packer.startup(function(use)
     run = ':TSUpdate'
   } -- Treesiter syntax highlight
 
+  use 'kyazdani42/nvim-tree.lua' -- Explorer sidebar (better than telescope to visualize entire structure)
   use 'nvim-telescope/telescope.nvim' -- File explorer in nvim
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser in nvim
   use 'nvim-lua/plenary.nvim' -- Common Utils
