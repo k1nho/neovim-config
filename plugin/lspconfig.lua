@@ -97,6 +97,17 @@ nvim_lsp.sumneko_lua.setup {
 -- TAILWIND CONFIG
 nvim_lsp.tailwindcss.setup {}
 
+--PRISMA CONFIG
+nvim_lsp.prismals.setup {
+  filetypes = {"prisma"},
+  cmd = {"prisma-language-server", "--stdio"}
+}
+
+-- C++ CONFIG
+nvim_lsp.clangd.setup{
+  filetypes = {"c", "cpp"}
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
