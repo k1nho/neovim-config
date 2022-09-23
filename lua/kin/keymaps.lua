@@ -35,4 +35,5 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 -- keymap.set('v', "<A-k>", ":m .-2<CR>==")
 -- keymap.set('v', "<A-j>", ":m .+1<CR>==")
 
-keymap.set('n', ';b', ':NvimTreeToggle<cr>', {silent = true}) -- open sidebar tree explorer
+keymap.set('n', ';b', ':NvimTreeToggle<cr>', {silent = true}) -- Open sidebar tree explorer
+keymap.set('n', ';l', ':lua _LAZYGIT_TOGGLE()<cr>', {silent = true}) --Open lazygit command
