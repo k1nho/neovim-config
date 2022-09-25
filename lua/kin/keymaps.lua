@@ -7,7 +7,6 @@ keymap.set('n', '+', '<C-a>') -- increment
 keymap.set('n', '-', '<C-x>') -- decrement
 
 keymap.set('n', 'dw', 'vb"_d') -- delete a word backward
-keymap.set('n', '<C-a>', 'gg<S-v>G') -- select entire file
 
 --tabs
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true }) --open a neovim tab
