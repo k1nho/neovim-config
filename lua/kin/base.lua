@@ -29,6 +29,7 @@ vim.opt.wrap = false                                  -- No wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }      -- allow backspacing over autoindent, over line breaks and over start insert
 vim.opt.path:append { '**' }                          -- Finding files - search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }      -- Ignore node_modules
+vim.opt.mouse = 'a'                                    -- Enable mouse (xD)
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
