@@ -58,6 +58,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
+-- STATIC TYPE CHECKER FOR JS
 nvim_lsp.flow.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -71,9 +72,10 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.sourcekit.setup {
-  on_attach = on_attach,
-}
+-- SWIFT, C-BASED LANGS
+-- nvim_lsp.sourcekit.setup {
+--  on_attach = on_attach,
+-- }
 
 -- LUA CONFIG
 nvim_lsp.sumneko_lua.setup {
@@ -105,8 +107,13 @@ nvim_lsp.prismals.setup {
 
 -- C++ CONFIG
 nvim_lsp.clangd.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
   filetypes = {"c", "cpp"}
 }
+
+-- GO CONFIG
+nvim_lsp.gopls.setup {}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
