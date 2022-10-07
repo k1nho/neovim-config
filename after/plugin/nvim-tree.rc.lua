@@ -60,4 +60,7 @@ nvimtree.setup{
       },
     },
   },
+  filters = {
+    dotfiles = false,
+  },
 }
