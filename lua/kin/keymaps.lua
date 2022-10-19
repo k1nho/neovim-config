@@ -33,6 +33,9 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 -- Move text with alt in visual modeline
 -- keymap.set('v', "<A-k>", ":m .-2<CR>==")
 -- keymap.set('v', "<A-j>", ":m .+1<CR>==")
+--
+-- Comment line command (JS, C++, Go)
+keymap.set('n', '<C-l>', 'I//<Esc>')
 
 keymap.set('n', ';b', ':NvimTreeToggle<cr>', {silent = true}) -- Open sidebar tree explorer
 keymap.set('n', ';l', ':lua _LAZYGIT_TOGGLE()<cr>', {silent = true}) --Open lazygit command
