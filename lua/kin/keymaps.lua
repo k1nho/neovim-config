@@ -30,6 +30,12 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 
+-- Vertical movement with center alignment
+keymap.set('n', '<C-d>', '<C-d>zz')
+keymap.set('n', '<C-u>', '<C-u>zz')
+keymap.set('n', 'n', 'nzz')
+keymap.set('n', 'N', 'Nzz')
+
 -- Move text with alt in visual modeline
 -- keymap.set('v', "<A-k>", ":m .-2<CR>==")
 -- keymap.set('v', "<A-j>", ":m .+1<CR>==")
