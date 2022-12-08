@@ -9,11 +9,13 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- PACKER
-  use 'folke/tokyonight.nvim' -- Theme tokyonight
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'hoob3rt/lualine.nvim' -- Status line
   use 'jose-elias-alvarez/null-ls.nvim' -- Using Neovim as LS to inject LSP diagnostics, code actions ...
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim built in LSP client
+
+  -- THEMES
+  use 'folke/tokyonight.nvim' -- Theme tokyonight
 
   use 'L3MON4D3/Luasnip' -- Snippet engine
 
@@ -40,6 +42,7 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim' -- File explorer in nvim
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser in nvim
   use 'nvim-lua/plenary.nvim' -- Common Utils
+  use 'ThePrimeagen/harpoon' -- file marker to make little overhead fast switches
   use 'akinsho/nvim-bufferline.lua' -- Customized bufferline (te)
   use 'norcalli/nvim-colorizer.lua' -- Colorizer for highlighting code
 

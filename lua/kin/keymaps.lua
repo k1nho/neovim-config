@@ -34,7 +34,14 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-d>', '<C-d>zz')
 keymap.set('n', '<C-u>', '<C-u>zz')
 keymap.set('n', 'n', 'nzz')
-keymap.set('n', 'N', 'Nzz')
+keymap.set('n', '<C-u>', '<C-u>zz')
+
+-- Harpoon
+keymap.set('n', ';q', ':lua require("harpoon.ui").toggle_quick_menu()<cr>')
+keymap.set('n', ';w', ':lua require("harpoon.mark").add_file()<cr>')
+keymap.set('n', ';1', ':lua require("harpoon.ui").nav_file(1)<cr>')
+keymap.set('n', ';2', ':lua require("harpoon.ui").nav_file(2)<cr>')
+keymap.set('n', ';3', ':lua require("harpoon.ui").nav_file(3)<cr>')
 
 -- Move text with alt in visual modeline
 -- keymap.set('v', "<A-k>", ":m .-2<CR>==")
