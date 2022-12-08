@@ -15,7 +15,9 @@ packer.startup(function(use)
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim built in LSP client
 
   -- THEMES
-  use 'folke/tokyonight.nvim' -- Theme tokyonight
+  use 'folke/tokyonight.nvim' -- Tokyonight
+  use ({'rose-pine/neovim', as='rose-pine'}) -- Rose-Pine
+  use 'ellisonleao/gruvbox.nvim' -- Gruvbox
 
   use 'L3MON4D3/Luasnip' -- Snippet engine
 
