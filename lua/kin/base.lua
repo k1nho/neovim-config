@@ -22,9 +22,9 @@ vim.opt.inccommand = 'split'
 vim.opt.ignorecase = true                             -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.smarttab = true                               -- Enable smart tab
 vim.opt.breakindent = true
-vim.opt.shiftwidth = 2                                -- Number of spaces to be inserted for each indent
+vim.opt.shiftwidth = 4                                -- Number of spaces to be inserted for each indent
 vim.opt.relativenumber = true                         -- Show line numbers relative to line cursor
-vim.opt.tabstop = 2                                   -- Spaces to insert for a tab
+vim.opt.tabstop = 4                                   -- Spaces to insert for a tab
 vim.opt.wrap = false                                  -- No wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }      -- allow backspacing over autoindent, over line breaks and over start insert
 vim.opt.path:append { '**' }                          -- Finding files - search down into subfolders
