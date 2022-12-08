@@ -27,34 +27,34 @@ end
 
 protocol.CompletionItemKind = {
   '', -- Text
-  '', -- Method
-  '', -- Function
-  '', -- Constructor
-  '', -- Field
-  '', -- Variable
-  '', -- Class
-  'ﰮ', -- Interface
-  '', -- Module
-  '', -- Property
-  '', -- Unit
-  '', -- Value
-  '', -- Enum
-  '', -- Keyword
-  '﬌', -- Snippet
+  ' method', -- Method
+  ' function', -- Function
+  ' constructor', -- Constructor
+  ' field', -- Field
+  ' variable', -- Variable
+  ' class', -- Class
+  'ﰮ interface', -- Interface
+  ' module', -- Module
+  ' property', -- Property
+  ' unit', -- Unit
+  ' value', -- Value
+  ' enum', -- Enum
+  ' keyword', -- Keyword
+  '﬌ snippet', -- Snippet
   '', -- Color
   '', -- File
   '', -- Reference
   '', -- Folder
   '', -- EnumMember
-  '', -- Constant
-  '', -- Struct
-  '', -- Event
+  ' constant', -- Constant
+  ' struct', -- Struct
+  ' event', -- Event
   'ﬦ', -- Operator
   '', -- TypeParameter
 }
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
@@ -114,6 +114,23 @@ nvim_lsp.clangd.setup{
 
 -- GO CONFIG
 nvim_lsp.gopls.setup {}
+
+-- RUST CONFIG
+nvim_lsp.rust_analyzer.setup{}
+
+-- ASTRO CONFIG
+nvim_lsp.astro.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {"astro-ls", "--stdio"},
+  filetypes ={ "astro"},
+  init_options =  {
+    configuration = {},
+    typescript = {
+      serverPath = ""
+    }
+  }
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
