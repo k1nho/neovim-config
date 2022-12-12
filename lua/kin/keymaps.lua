@@ -42,6 +42,12 @@ keymap.set('n', ';w', ':lua require("harpoon.mark").add_file()<cr>')
 keymap.set('n', ';1', ':lua require("harpoon.ui").nav_file(1)<cr>')
 keymap.set('n', ';2', ':lua require("harpoon.ui").nav_file(2)<cr>')
 keymap.set('n', ';3', ':lua require("harpoon.ui").nav_file(3)<cr>')
+keymap.set('n', ';4', ':lua require("harpoon.ui").nav_file(4)<cr>')
+keymap.set('n', ';5', ':lua require("harpoon.ui").nav_file(5)<cr>')
+keymap.set('n', ';6', ':lua require("harpoon.ui").nav_file(6)<cr>')
+keymap.set('n', ';7', ':lua require("harpoon.ui").nav_file(7)<cr>')
+keymap.set('n', ';8', ':lua require("harpoon.ui").nav_file(8)<cr>')
+keymap.set('n', ';9', ':lua require("harpoon.ui").nav_file(9)<cr>')
 
 -- Move text with alt in visual modeline
 -- keymap.set('v', "<A-k>", ":m .-2<CR>==")
