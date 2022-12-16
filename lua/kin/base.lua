@@ -9,7 +9,6 @@ vim.wo.number = true                                  -- Enable line numbers
 vim.opt.title = true
 vim.opt.autoindent = true                             -- Enable auto indent 
 vim.opt.smartindent = true                            -- Enable smart indent
-vim.opt.hlsearch = true                               -- Highlight matches on search
 vim.opt.backup = false                                -- Backup file creation
 vim.opt.showcmd = true                                -- Show partial command in the last line of the screen
 vim.opt.cmdheight = 1                                 -- Command line spacing
