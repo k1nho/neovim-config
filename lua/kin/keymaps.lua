@@ -36,6 +36,10 @@ keymap.set('n', '<C-u>', '<C-u>zz')
 keymap.set('n', 'n', 'nzz')
 keymap.set('n', '<C-u>', '<C-u>zz')
 
+-- Move when highlighted
+keymap.set('v', 'J', ":m '>+1<cr>gv=gv")
+keymap.set('v', 'K', ":m '<-2<cr>gv=gv")
+
 -- Harpoon
 keymap.set('n', ';q', ':lua require("harpoon.ui").toggle_quick_menu()<cr>')
 keymap.set('n', ';w', ':lua require("harpoon.mark").add_file()<cr>')
