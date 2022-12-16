@@ -118,6 +118,9 @@ nvim_lsp.gopls.setup {}
 -- RUST CONFIG
 nvim_lsp.rust_analyzer.setup{}
 
+-- PYTHON CONFIG
+nvim_lsp.pylsp.setup{}
+
 -- ASTRO CONFIG
 nvim_lsp.astro.setup {
   on_attach = on_attach,
