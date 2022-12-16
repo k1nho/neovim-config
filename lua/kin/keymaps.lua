@@ -1,12 +1,15 @@
 local keymap = vim.keymap
 keymap.set('n', 'x', '"_x') -- avoid x yank
 
--- use CAPS[ instead of esc to escape modes
+-- use jk instead of esc to escape insert mode
 keymap.set('i', 'jk', '<Esc>')
 keymap.set('n', '+', '<C-a>') -- increment
 keymap.set('n', '-', '<C-x>') -- decrement
 
 keymap.set('n', 'dw', 'vb"_d') -- delete a word backward
+keymap.set('n', 'J', "mzJ`z") -- when moving a below line upwards maintain cursor position
+keymap.set('x', ';p', "\"_dP") -- keep previous buffer when pasting over a word
+keymap.set('n', ";s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") --quick replace word
 
 --tabs
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true }) --open a neovim tab
@@ -53,10 +56,6 @@ keymap.set('n', ';7', ':lua require("harpoon.ui").nav_file(7)<cr>')
 keymap.set('n', ';8', ':lua require("harpoon.ui").nav_file(8)<cr>')
 keymap.set('n', ';9', ':lua require("harpoon.ui").nav_file(9)<cr>')
 
--- Move text with alt in visual modeline
--- keymap.set('v', "<A-k>", ":m .-2<CR>==")
--- keymap.set('v', "<A-j>", ":m .+1<CR>==")
---
 -- Comment Line command (TS, JS, C++, Go)
 keymap.set('n', '<C-l>', 'I//<Esc>')
 -- Uncomment Line command 
