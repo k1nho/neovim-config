@@ -17,5 +17,6 @@ null_ls.setup {
         diagnostics_format = '[eslint] #{m}\n(#{c})'
       }),
       fmt.rustfmt,
+      fmt.goimports
   }
 }
