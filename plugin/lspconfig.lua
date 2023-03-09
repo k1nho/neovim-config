@@ -67,7 +67,7 @@ nvim_lsp.flow.setup {
 -- TS CONFIG
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript"},
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
@@ -96,14 +96,16 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
+-- EMMET CONFIG
+nvim_lsp.emmet_ls.setup{
+    filetypes = {'vue', 'tsx', 'typescriptreact'}
+}
+--HTML CONFIG
+nvim_lsp.html.setup{}
+
 -- TAILWIND CONFIG
 nvim_lsp.tailwindcss.setup {}
 
---PRISMA CONFIG
-nvim_lsp.prismals.setup {
-  filetypes = {"prisma"},
-  cmd = {"prisma-language-server", "--stdio"}
-}
 
 -- C++ CONFIG
 nvim_lsp.clangd.setup{
@@ -121,6 +123,9 @@ nvim_lsp.rust_analyzer.setup{}
 -- PYTHON CONFIG
 nvim_lsp.pylsp.setup{}
 
+-- C# CONFIG
+nvim_lsp.csharp_ls.setup{}
+
 -- ASTRO CONFIG
 nvim_lsp.astro.setup {
   on_attach = on_attach,
@@ -133,6 +138,11 @@ nvim_lsp.astro.setup {
       serverPath = ""
     }
   }
+}
+
+-- VUE CONFIG
+nvim_lsp.volar.setup{
+    filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
