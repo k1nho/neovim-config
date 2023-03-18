@@ -106,6 +106,8 @@ nvim_lsp.html.setup{}
 -- TAILWIND CONFIG
 nvim_lsp.tailwindcss.setup {}
 
+-- PRISMA CONFIG
+nvim_lsp.prismals.setup{}
 
 -- C++ CONFIG
 nvim_lsp.clangd.setup{
