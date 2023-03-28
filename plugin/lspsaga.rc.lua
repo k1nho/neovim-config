@@ -1,10 +1,13 @@
 local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
-saga.setup {
+saga.setup{
   server_filetype_map = {
     typescript = 'typescript'
-  }
+  },
+  symbol_in_winbar = {
+        enable = false,
+  },
 }
 
 local opts = { noremap = true, silent = true }
