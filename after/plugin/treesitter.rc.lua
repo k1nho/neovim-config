@@ -25,7 +25,10 @@ ts.setup {
     "rust",
     "javascript",
     "typescript",
-    "cpp"
+    "cpp",
+    "vue",
+    "markdown",
+    "markdown_inline"
   },
   autotag = {
     enable = true,
