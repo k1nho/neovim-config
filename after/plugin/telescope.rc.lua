@@ -40,7 +40,7 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 -- OPEN FUZZY FINDER
-vim.keymap.set('n', ';f',
+vim.keymap.set('n', '<space>f',
   function()
     builtin.find_files({
       no_ignore = false,
@@ -48,20 +48,20 @@ vim.keymap.set('n', ';f',
     })
   end)
 -- OPEN GREP
-vim.keymap.set('n', ';r', function()
+vim.keymap.set('n', '<space>r', function()
   builtin.live_grep()
 end)
 -- BUFFER FILES
 vim.keymap.set('n', '\\\\', function()
   builtin.buffers()
 end)
-vim.keymap.set('n', ';t', function()
+vim.keymap.set('n', '<space>t', function()
   builtin.help_tags()
 end)
-vim.keymap.set('n', ';;', function()
+vim.keymap.set('n', '<space>;', function()
   builtin.resume()
 end)
-vim.keymap.set('n', ';e', function()
+vim.keymap.set('n', '<space>e', function()
   builtin.diagnostics()
 end)
 -- OPEN ENTIRE DIRECTORIES

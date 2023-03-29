@@ -44,22 +44,22 @@ keymap.set('v', 'J', ":m '>+1<cr>gv=gv")
 keymap.set('v', 'K', ":m '<-2<cr>gv=gv")
 
 -- Harpoon
-keymap.set('n', ';q', ':lua require("harpoon.ui").toggle_quick_menu()<cr>')
-keymap.set('n', ';w', ':lua require("harpoon.mark").add_file()<cr>')
-keymap.set('n', ';1', ':lua require("harpoon.ui").nav_file(1)<cr>')
-keymap.set('n', ';2', ':lua require("harpoon.ui").nav_file(2)<cr>')
-keymap.set('n', ';3', ':lua require("harpoon.ui").nav_file(3)<cr>')
-keymap.set('n', ';4', ':lua require("harpoon.ui").nav_file(4)<cr>')
-keymap.set('n', ';5', ':lua require("harpoon.ui").nav_file(5)<cr>')
-keymap.set('n', ';6', ':lua require("harpoon.ui").nav_file(6)<cr>')
-keymap.set('n', ';7', ':lua require("harpoon.ui").nav_file(7)<cr>')
-keymap.set('n', ';8', ':lua require("harpoon.ui").nav_file(8)<cr>')
-keymap.set('n', ';9', ':lua require("harpoon.ui").nav_file(9)<cr>')
+keymap.set('n', '<space>q', ':lua require("harpoon.ui").toggle_quick_menu()<cr>')
+keymap.set('n', '<space>w', ':lua require("harpoon.mark").add_file()<cr>')
+keymap.set('n', '<space>1', ':lua require("harpoon.ui").nav_file(1)<cr>')
+keymap.set('n', '<space>2', ':lua require("harpoon.ui").nav_file(2)<cr>')
+keymap.set('n', '<space>3', ':lua require("harpoon.ui").nav_file(3)<cr>')
+keymap.set('n', '<space>4', ':lua require("harpoon.ui").nav_file(4)<cr>')
+keymap.set('n', '<space>5', ':lua require("harpoon.ui").nav_file(5)<cr>')
+keymap.set('n', '<space>6', ':lua require("harpoon.ui").nav_file(6)<cr>')
+keymap.set('n', '<space>7', ':lua require("harpoon.ui").nav_file(7)<cr>')
+keymap.set('n', '<space>8', ':lua require("harpoon.ui").nav_file(8)<cr>')
+keymap.set('n', '<space>9', ':lua require("harpoon.ui").nav_file(9)<cr>')
 
 -- Comment Line command (TS, JS, C++, Go)
 keymap.set('n', '<C-l>', 'I//<Esc>')
 -- Uncomment Line command 
 keymap.set('n', 'm', 'I<Esc>xx')
 
-keymap.set('n', ';b', ':NvimTreeToggle<cr>', {silent = true}) -- Open sidebar tree explorer
-keymap.set('n', ';l', ':lua _LAZYGIT_TOGGLE()<cr>', {silent = true}) --Open lazygit command
+keymap.set('n', '<space>b', ':NvimTreeToggle<cr>', {silent = true}) -- Open sidebar tree explorer
+keymap.set('n', '<space>l', ':lua _LAZYGIT_TOGGLE()<cr>', {silent = true}) --Open lazygit command
