@@ -105,7 +105,10 @@ nvim_lsp.emmet_ls.setup{
 nvim_lsp.html.setup{}
 
 -- TAILWIND CONFIG
-nvim_lsp.tailwindcss.setup {}
+nvim_lsp.tailwindcss.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
 
 -- PRISMA CONFIG
 nvim_lsp.prismals.setup{}
@@ -118,16 +121,28 @@ nvim_lsp.clangd.setup{
 }
 
 -- GO CONFIG
-nvim_lsp.gopls.setup {}
+nvim_lsp.gopls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
 
 -- RUST CONFIG
-nvim_lsp.rust_analyzer.setup{}
+nvim_lsp.rust_analyzer.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
 
 -- PYTHON CONFIG
-nvim_lsp.pylsp.setup{}
+nvim_lsp.pylsp.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
 
 -- C# CONFIG
-nvim_lsp.csharp_ls.setup{}
+nvim_lsp.csharp_ls.setup{
+    on_attach=on_attach,
+    capabilities = capabilities,
+}
 
 -- ASTRO CONFIG
 nvim_lsp.astro.setup {
