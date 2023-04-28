@@ -136,6 +136,18 @@ nvim_lsp.rust_analyzer.setup{
 nvim_lsp.pylsp.setup{
     on_attach = on_attach,
     capabilities = capabilities,
+    flags ={
+        debounce_text_changes = 150,
+    },
+    settings = {
+        pylsp = {
+            plugins = {
+                pyflakes = {enabled = false},
+                pycodestyle = {enabled = true, ignore = "E501,E261, W391"},
+                pylint = {enabled = false}
+            },
+        },
+    },
 }
 
 -- C# CONFIG
@@ -160,7 +172,7 @@ nvim_lsp.astro.setup {
 
 -- VUE CONFIG
 nvim_lsp.volar.setup{
-    filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+    filetypes = {'typescript', 'javascript', 'vue'}
 }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
