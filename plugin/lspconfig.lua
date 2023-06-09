@@ -74,9 +74,9 @@ nvim_lsp.tsserver.setup {
 }
 
 -- SWIFT, C-BASED LANGS
--- nvim_lsp.sourcekit.setup {
---  on_attach = on_attach,
--- }
+nvim_lsp.sourcekit.setup {
+    on_attach = on_attach,
+}
 
 -- LUA CONFIG
 nvim_lsp.lua_ls.setup {
@@ -154,6 +154,7 @@ nvim_lsp.pylsp.setup{
 nvim_lsp.csharp_ls.setup{
     on_attach=on_attach,
     capabilities = capabilities,
+    filetypes={"cs"},
 }
 
 -- ASTRO CONFIG
@@ -170,10 +171,8 @@ nvim_lsp.astro.setup {
   }
 }
 
--- VUE CONFIG
-nvim_lsp.volar.setup{
-    filetypes = {'typescript', 'javascript', 'vue'}
-}
+--SQL LS
+nvim_lsp.sqlls.setup{}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
