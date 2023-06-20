@@ -13,8 +13,8 @@ keymap.set('n', ";s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") --
 
 --tabs
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true }) --open a neovim tab
-keymap.set('n', 'ss', ':split<Return><C-w>w  :terminal<cr>', { silent = true }) -- split window horizontal
-keymap.set('n', 'sv', ':vsplit<Return><C-w>w :terminal<cr>', { silent = true }) -- split window vertical
+keymap.set('n', 'ss', ':silent !tmux split-window -v -c "#{pane_current_path}" "zsh"<CR>', { silent = true }) -- split window horizontal
+keymap.set('n', 'sv', ':silent !tmux split-window -h -c "#{pane_current_path}" "zsh"<CR>', { silent = true }) -- split window vertical
 
 -- tab navigation (up, down, left, right)
 keymap.set('n', '<Space>', '<C-w>w')
