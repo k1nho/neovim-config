@@ -1,6 +1,9 @@
 local keymap = vim.keymap
 keymap.set('n', 'x', '"_x') -- avoid x yank
 
+keymap.set('n', 'j', 'jzz')
+keymap.set('n', 'k', 'kzz')
+
 -- use jk instead of esc to escape insert mode
 keymap.set('i', 'jk', '<Esc>')
 keymap.set('n', '+', '<C-a>') -- increment
@@ -13,8 +16,9 @@ keymap.set('n', ";s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") --
 
 --tabs
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true }) --open a neovim tab
-keymap.set('n', 'ss', ':silent !tmux split-window -v -c "#{pane_current_path}" "zsh"<CR>', { silent = true }) -- split window horizontal
-keymap.set('n', 'sv', ':silent !tmux split-window -h -c "#{pane_current_path}" "zsh"<CR>', { silent = true }) -- split window vertical
+keymap.set('n', 'ss', ':silent !tmux split-window -v -c "$(pwd)" "zsh"<CR>', { silent = true }) -- split window horizontal
+keymap.set('n', 'sv', ':silent !tmux split-window -h -c "$(pwd)" "zsh"<CR>', { silent = true }) -- split window vertical
+keymap.set('n', 'ff', ':silent !tmux resize-pane -Z<CR>', {silent=true}) --go full screen on current panilent !tmux resize-pane -Z
 
 -- tab navigation (up, down, left, right)
 keymap.set('n', '<Space>', '<C-w>w')
@@ -24,7 +28,7 @@ keymap.set('', 's<right>', '<C-w>l')
 keymap.set('', 's<left>', '<C-w>h')
 keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
-keymap.set('', 'sl', '<C-w>l')
+keymap.set('', 'sl', ':silent !tmux select-pane -R<CR>')
 keymap.set('', 'sh', '<C-w>h')
 
 -- tab resize (up, down, left, right)
@@ -63,3 +67,4 @@ keymap.set('n', 'm', 'I<Esc>xx')
 
 keymap.set('n', '<space>b', ':NvimTreeToggle<cr>', {silent = true}) -- Open sidebar tree explorer
 keymap.set('n', '<space>l', ':lua _LAZYGIT_TOGGLE()<cr>', {silent = true}) --Open lazygit command
+
