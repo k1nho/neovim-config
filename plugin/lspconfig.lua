@@ -59,11 +59,6 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
--- STATIC TYPE CHECKER FOR JS
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
 
 -- TS CONFIG
 nvim_lsp.tsserver.setup {
@@ -73,14 +68,23 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+-- VUE CONFIG
+nvim_lsp.volar.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {'vue'}
+}
+
 -- SWIFT, C-BASED LANGS
 nvim_lsp.sourcekit.setup {
     on_attach = on_attach,
+    capabilities = capabilities
 }
 
 -- LUA CONFIG
 nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -99,10 +103,15 @@ nvim_lsp.lua_ls.setup {
 
 -- EMMET CONFIG
 nvim_lsp.emmet_ls.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
     filetypes = {'vue', 'tsx', 'typescriptreact'}
 }
 --HTML CONFIG
-nvim_lsp.html.setup{}
+nvim_lsp.html.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
 
 -- TAILWIND CONFIG
 nvim_lsp.tailwindcss.setup {
@@ -111,7 +120,10 @@ nvim_lsp.tailwindcss.setup {
 }
 
 -- PRISMA CONFIG
-nvim_lsp.prismals.setup{}
+nvim_lsp.prismals.setup{
+    on_attach = on_attach,
+    capabilities = capabilities
+}
 
 -- C++ CONFIG
 nvim_lsp.clangd.setup{
@@ -172,7 +184,15 @@ nvim_lsp.astro.setup {
 }
 
 --SQL LS
-nvim_lsp.sqlls.setup{}
+nvim_lsp.sqlls.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
+--TERRAFORM LS 
+nvim_lsp.terraformls.setup{
+    filetypes={"tf", "terraform", "hcl"}
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

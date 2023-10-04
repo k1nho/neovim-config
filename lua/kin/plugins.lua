@@ -27,6 +27,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp' --nvim-cmp source for nvim built in LSP's
   use 'hrsh7th/nvim-cmp' -- Auto complete
 
+  -- LSP
   use 'neovim/nvim-lspconfig' -- LSP (language server protocol)
   use 'glepnir/lspsaga.nvim' -- UI's for LSP
   use 'williamboman/mason.nvim' -- Get Other LSP's
@@ -52,4 +53,16 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- Git blame and browse
   use 'lewis6991/gitsigns.nvim' -- Show git status of a file in the gutter
   use 'akinsho/toggleterm.nvim' -- show terminal on toggle
+
+  -- Debug Adapter Protocol
+  use 'mfussenegger/nvim-dap'
+
+  -- GOLANG GOODS
+  use {
+  "olexsmir/gopher.nvim",
+  requires = { -- dependencies
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+  },
+}
 end)

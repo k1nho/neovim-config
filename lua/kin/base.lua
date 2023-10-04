@@ -31,6 +31,8 @@ vim.opt.wildignore:append { '*/node_modules/*' }      -- Ignore node_modules
 vim.opt.mouse = 'a'                                   -- Enable mouse (xD)
 vim.opt.hlsearch = false                              -- Do not allow terms to be highlighted after search   
 vim.opt.incsearch = true                              -- Allow terms to incrementally be highlighted when searching
+vim.opt.spelllang = 'en_us'                           -- Spelling language
+vim.opt.spell = true                                  -- Enable spelling
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
