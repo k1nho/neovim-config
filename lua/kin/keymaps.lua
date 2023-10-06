@@ -1,6 +1,7 @@
 local keymap = vim.keymap
 keymap.set('n', 'x', '"_x') -- avoid x yank
 
+-- center screen when going up and down
 keymap.set('n', 'j', 'jzz')
 keymap.set('n', 'k', 'kzz')
 
@@ -11,7 +12,7 @@ keymap.set('n', '-', '<C-x>') -- decrement
 
 keymap.set('n', 'dw', 'vb"_d') -- delete a word backward
 keymap.set('n', 'J', "mzJ`z") -- when moving a below line upwards maintain cursor position
-keymap.set('x', ';p', "\"_dP") -- keep previous buffer when pasting over a word
+keymap.set('x', '<Space>p', "\"_dP") -- keep previous buffer when pasting over a word
 keymap.set('n', ";s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") --quick replace word
 
 --tabs
@@ -61,10 +62,12 @@ keymap.set('n', '<space>8', ':lua require("harpoon.ui").nav_file(8)<cr>')
 keymap.set('n', '<space>9', ':lua require("harpoon.ui").nav_file(9)<cr>')
 
 -- Comment Line command (TS, JS, C++, Go)
-keymap.set('n', '<C-l>', 'I//<Esc>')
+keymap.set('x', '<space>c', [[:s,^,//,g<CR>:noh<CR>]])
 -- Uncomment Line command 
-keymap.set('n', 'm', 'I<Esc>xx')
+keymap.set('x', '<space>u', [[:s,//,,g<CR>:noh<CR>]])
 
+keymap.set('x', '<Leader>c', [[:s/^/#/g<CR>:noh<CR>]], { noremap = true, silent = true })
 keymap.set('n', '<space>b', ':NvimTreeToggle<cr>', {silent = true}) -- Open sidebar tree explorer
 keymap.set('n', '<space>l', ':lua _LAZYGIT_TOGGLE()<cr>', {silent = true}) --Open lazygit command
+
 
